@@ -1,0 +1,120 @@
+<!--
+Author: Koushal Sadaful
+Date: 12th September 2015
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wikiglass</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="javascript/libraries/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Underscore Library JavaScript -->
+    <script src="javascript/libraries/underscore/underscore-min.js"></script>
+
+
+    <!-- Angular Dependencies JavaScript -->
+    <script src="javascript/libraries/angular/angular.min.js"></script>
+    <script src="javascript/libraries/angular/angular-resource.min.js"></script>
+    <script src="javascript/libraries/angular/angular-route.min.js"></script>
+    <script src="javascript/libraries/angular/angular-animate.min.js"></script>
+
+
+    <!-- General Purpose Functions JavaScript -->
+    <script src="javascript/function/LoggedIn.js"></script>
+    <script src="javascript/function/AttemptLogOut.js"></script>
+    <script src="javascript/function/CleanNavBar.js"></script>
+    <script src="javascript/function/SetNavBar.js"></script>
+    <script src="javascript/function/LogUserActivity.js"></script>
+
+
+    <!-- Angular Controllers JavaScript -->
+    <script src="javascript/controller/main-controller.js"></script>
+    <script src="javascript/controller/login-controller.js"></script>
+    <script src="javascript/controller/class-controller.js"></script>
+    <script src="javascript/controller/group-controller.js"></script>
+    <script src="javascript/controller/logout-controller.js"></script>
+    <script src="javascript/controller/dashboard-controller.js"></script>
+    <script src="javascript/controller/student-controller.js"></script>
+
+    <!-- CanvasJS JavaScript -->
+    <script src="javascript/libraries/canvas/canvasjs.min.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css"      rel="stylesheet">
+
+    <!-- Toggle Button CSS/JS -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+
+    <!-- Charting Library: C3/D3 -->
+    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <script src="javascript/libraries/c3/c3.js" charset="utf-8"></script>
+    <link href="javascript/libraries/c3/c3.css" rel="stylesheet" type="text/css"    >
+
+    <!-- Charting Library: Highcharts -->
+    <script src="javascript/libraries/highcharts/highcharts.js" charset="utf-8"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body id="background" class="index" >
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top"> <p style="color: #FF6A6A;"> WikiGlass Analytics</p> </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#/dashboard">Dashboard </a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="welcome-msg"></a></li>
+                    <!--<li  id="logs">  </li>-->
+                    <li  class="active" id="logout">  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div ng-view>  </div>
+
+</body>
+
+</html>

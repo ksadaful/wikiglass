@@ -1,0 +1,41 @@
+<div class="container first-element" id="dashboard-background">
+   <div class="row">
+       <div class="col-xs-12">
+           <h4>WikiGlass Class Analytics</h4>
+           <hr>
+           <div class="row">
+               <div class="col-xs-12 col-sm-8">
+                   <h5> Class: {{ className }}</h5>
+               </div>
+               <div class="col-xs-12 col-sm-4">
+                   <div class="btn-group btn-toggle" id="right">
+                       <button class="btn btn-default" id="comparison-btn"  ng-click="showComparison()">Statistics</button>
+                       <button class="btn btn-primary" id="timeline-btn"    ng-click="showTimeline()">Timeline </button>
+                   </div>
+               </div>
+
+           </div>
+           <hr>
+
+
+
+           <div id="comparison-view" class="fadein fadeout" ng-show="show_comp">
+
+               <h5> Comparison Mode </h5>
+               <div id="RevisionChart"  class="chart"> </div> <br>
+               <div id="WordChart"      class="chart"> </div> <br>
+               <div id="PageChart"      class="chart"> </div> <br>
+           </div>
+
+           <div id="timeline-view" class="fadein fadeout" ng-show="show_time" >
+               <h5> Timeline Mode </h5>
+               <p> Weekly Revision Count for each group </p>
+
+               <div id="revision_count_timeline"></div>
+               <div id="container" class="chart-css"></div>
+               <div id="container2" class="chart-css"></div>
+           </div>
+
+       </div>
+   </div>
+</div>

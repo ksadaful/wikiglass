@@ -1,0 +1,86 @@
+/*===================== GENERAL STYLING =========================== */
+.error-message
+{
+    color: #FF0000;
+}
+
+
+#right {
+    float: right;
+    padding: 10px;
+
+}
+
+.inline
+{
+    display: inline;
+}
+
+/*===================== LOGIN PAGE STYLING =========================== */
+
+.screen-center {
+    top: 50%;
+    left: 50%;
+    width:30em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position:fixed;
+}
+
+.first-element
+{
+   margin-top:100px;
+}
+
+.center-text
+{
+    text-align: center;
+}
+
+#background
+{
+    background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*===================== DASHBOARD PAGE STYLING =========================== */
+#dashboard-background
+{
+    background-color: #fff;
+}
+
+/*===================== CLASS PAGE STYLING =========================== */
+.chart
+{
+    height: 300px;
+}
+.chart-student
+{
+    height: 600px;
+}
+
+/*============= ANIMATION CSS ========================*/
+.fadein,
+.fadeout {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.fadein.ng-hide-remove,
+.fadeout.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+  display: block !important;
+}
+
+.fadeout.ng-hide-add,
+.fadein.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+  display: block !important;
+}

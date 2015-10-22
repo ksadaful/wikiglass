@@ -1,0 +1,123 @@
+{
+  "data": [
+    {
+      "time": "2015-10-21 10:39:58",
+      "class": "2013twgss2b",
+      "group": "",
+      "student": "",
+      "chart type": "statistics"
+    },
+    {
+      "time": "2015-10-21 10:39:57",
+      "class": "2013twgss2b",
+      "group": "",
+      "student": "",
+      "chart type": "statistics"
+    },
+    {
+      "time": "2015-10-21 10:39:54",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "statistics"
+    },
+    {
+      "time": "2015-10-21 10:39:47",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "timeline"
+    },
+    {
+      "time": "2015-10-21 10:39:46",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "timeline"
+    },
+    {
+      "time": "2015-10-21 10:39:40",
+      "class": "2013twgss1a",
+      "group": "5",
+      "student": "",
+      "chart type": "timeline"
+    },
+    {
+      "time": "2015-10-21 10:39:40",
+      "class": "2013twgss1a",
+      "group": "5",
+      "student": "",
+      "chart type": "timeline"
+    },
+    {
+      "time": "2015-10-21 10:38:40",
+      "class": "2013twgss1a",
+      "group": "5",
+      "student": "LAU SHU LAM",
+      "chart type": "timeline"
+    },
+    {
+      "time": "2015-10-21 10:38:32",
+      "class": "2013twgss1a",
+      "group": "5",
+      "student": "",
+      "chart type": "timeline"
+    },
+    {
+      "time": "2015-10-21 10:38:32",
+      "class": "2013twgss1a",
+      "group": "5",
+      "student": "",
+      "chart type": "timeline"
+    },
+    {
+      "time": "2015-10-21 10:38:29",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "timeline"
+    },
+    {
+      "time": "2015-10-21 10:38:26",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "statistics"
+    },
+    {
+      "time": "2015-10-21 10:38:16",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "timeline"
+    },
+    {
+      "time": "2015-10-21 10:38:12",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "statistics"
+    },
+    {
+      "time": "2015-10-21 10:38:11",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "statistics"
+    },
+    {
+      "time": "2015-10-21 10:37:11",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "statistics"
+    },
+    {
+      "time": "2015-10-21 10:34:41",
+      "class": "2013twgss1a",
+      "group": "",
+      "student": "",
+      "chart type": "comparison"
+    }
+  ]
+}

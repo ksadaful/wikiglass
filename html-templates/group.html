@@ -1,0 +1,41 @@
+<div class="container first-element" id="dashboard-background">
+   <div class="row">
+       <div class="col-xs-12">
+           <h4>WikiGlass Student Group Analytics</h4>
+
+           <hr>
+           <div class="row">
+               <div class="col-xs-12 col-sm-8">
+                   <h5> Class: <a href="#/class/{{ className }}"> {{ className }} </a>   | Group: {{ groupNo }}</h5>
+               </div>
+               <div class="col-xs-12 col-sm-4">
+                   <div class="btn-group btn-toggle" id="right">
+                       <button class="btn btn-default" ng-click="showComparison()" id="comparison-btn">Statistics</button>
+                       <button class="btn btn-primary" ng-click="showTimeline()" id="timeline-btn">Timeline </button>
+                   </div>
+               </div>
+
+           </div>
+           <hr>
+
+           <div class="comparison-view" ng-show="show_comp">
+
+               <h5> Comparison Mode </h5>
+               <div id="PageChart"      class="chart"> </div>  <hr>
+               <div id="RevisionChart"  class="chart"> </div>  <hr>
+               <div id="AdditionChart"      class="chart"> </div>  <hr>
+               <div id="DeletionChart"      class="chart"> </div>  <hr>
+           </div>
+
+           <div class="timeline-view" ng-show="show_time">
+               <h5> Timeline Mode </h5>
+               <h5> Weekly word amendment count by each student in the group </h5>
+
+               <div id="word-amendment-timeline" class="chart-css"></div>
+           </div>
+
+
+       </div>
+   </div>
+</div>
+

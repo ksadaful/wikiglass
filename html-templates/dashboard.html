@@ -1,0 +1,21 @@
+<div class="container first-element" id="dashboard-background">
+   <div class="row">
+       <div class="col-xs-12">
+           <h4>Welcome to the WikiGlass Analytics Dashboard</h4>
+
+           <table class="table table-striped table-hover ">
+               <thead>
+                   <tr>
+                       <th> <h5> Select a Wiki Page</h5> </th>
+                   </tr>
+               </thead>
+
+               <tbody>
+                   <tr ng-repeat="page in wikiPages"  >  <!--ng-class=" $index % 2 == 0 ? 'info' : 'danger' "-->
+                       <td> <h6> <a href="#/class/{{ wikiPages[$index] }}"> {{ wikiPages[$index] }} </a> </h6> </td>
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+   </div>
+</div>
