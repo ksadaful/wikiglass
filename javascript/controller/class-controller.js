@@ -9,7 +9,7 @@ mainApp.controller('ClassCtrl', ['$scope','$routeParams','$http' , '$window', fu
 
     if(!LoggedIn())
     {
-        window.location.href = "#/login"
+        window.location.href = "#/login";
         CleanNavBar();
     }
     else
@@ -69,7 +69,7 @@ mainApp.controller('ClassCtrl', ['$scope','$routeParams','$http' , '$window', fu
                alert("Error: Could not retrieve data from server!");
              });
          comparison_loaded = true;
-        };
+        }
 
         function ShowTimeline()
         {
@@ -92,7 +92,7 @@ mainApp.controller('ClassCtrl', ['$scope','$routeParams','$http' , '$window', fu
                      var cumulative_revision_count = 0;
                      for(j = 0 ; j < data.data[i].data.length ; j++)
                      {
-                        cumulative_revision_count = cumulative_revision_count + parseInt(data.data[i].data[j].y)
+                        cumulative_revision_count = cumulative_revision_count + parseInt(data.data[i].data[j].y);
                         data.data[i].data[j].x = Date.parse(data.data[i].data[j].x);
                         data.data[i].data[j].y = cumulative_revision_count;
                      }
@@ -165,7 +165,7 @@ mainApp.controller('ClassCtrl', ['$scope','$routeParams','$http' , '$window', fu
 
          timeline_loaded = true;
 
-        };
+        }
 
         $scope.showComparison = ShowComparison;
         $scope.showTimeline = ShowTimeline;
@@ -206,7 +206,7 @@ function generateClassChart(div_name, title, x_title, y_title, label, dataPoints
             dataPoints: dataPoints,
             click: function(e){
                 window.location.href = "#/class/"+classId+"/"+e.dataPoint.label
-            },
+            }
         }]
     });
     chart.render();
