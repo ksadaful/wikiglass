@@ -38,8 +38,6 @@ mainApp.controller('ClassCtrl', ['$scope','$routeParams','$http' , '$window', fu
 
 
         LogUserActivity(classID, ""  , ""  );
-
-
         var timeline_loaded = false;
         var comparison_loaded = false;
 
@@ -83,10 +81,6 @@ mainApp.controller('ClassCtrl', ['$scope','$routeParams','$http' , '$window', fu
          $http.get('php/getWeeklyRevisionCountByClassIdHighchart2.php?class_id='+ classID ).
              success(function(data, status, headers, config) {
 
- //                var Dates = data.dates;
- //                console.log("HIGHCHART: " );
- //                console.log(data.data);
-
                 for(i = 0 ; i < data.data.length ; i++)
                 {
                      var cumulative_revision_count = 0;
@@ -97,11 +91,9 @@ mainApp.controller('ClassCtrl', ['$scope','$routeParams','$http' , '$window', fu
                         data.data[i].data[j].y = cumulative_revision_count;
                      }
                 }
-                 console.log("MODIFIED DATA: " );
-                 console.log(data.data);
 
                  $( function () {
-                     $('#container2').highcharts({
+                     $('#revision_count_timeline').highcharts({
                          chart: {
                              type: 'line'
                          },
@@ -163,7 +155,85 @@ mainApp.controller('ClassCtrl', ['$scope','$routeParams','$http' , '$window', fu
                alert("Error: Could not retrieve data from server!");
              });
 
-         timeline_loaded = true;
+         $http.get('php/getWeeklyWordAmendmentByClassId.php?class_id='+ classID ).
+             success(function(data, status, headers, config) {
+
+                for(i = 0 ; i < data.data.length ; i++)
+                {
+                    var cumulative_word_amendment = 0;
+                    for(j = 0 ; j < data.data[i].data.length ; j++)
+                    {
+                        cumulative_word_amendment = cumulative_word_amendment + parseInt(data.data[i].data[j].y);
+                        data.data[i].data[j].x = Date.parse(data.data[i].data[j].x);
+                        data.data[i].data[j].y = cumulative_word_amendment;
+                    }
+                }
+
+                $( function () {
+                    $('#word_amendment_count_timeline').highcharts({
+                        chart: {
+                            type: 'line'
+                        },
+                        title: {
+                            text: 'Word Amendment Count Timeline'
+                        },
+                        xAxis: {
+                            type: 'datetime',
+                            dateTimeLabelFormats: { // don't display the dummy year
+                                month: '%e. %b',
+                                year: '%b'
+                            },
+                            title: {
+                                text: 'Date'
+                            }
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Word Amendment Counts'
+                            },
+                            min: 0
+                        },
+                        tooltip: {
+                            headerFormat: '<b>{series.name}</b><br>',
+                            pointFormat: '{point.x:%e. %b}: {point.y} Word Amendment Counts',
+                            crosshairs: true
+                        },
+
+                        plotOptions: {
+                            line: {
+                                marker: {
+                                    enabled: true
+                                }
+                            },
+
+                            series:
+                            {
+                                cursor: 'pointer',
+                                point: {
+                                    events: {
+                                        click: function (event)
+                                        {
+                                            window.location.href = this.url;
+                                        }
+                                    }
+                                },
+                                marker: {
+                                    lineWidth: 0.5
+                                }
+                            }
+                        },
+
+                        series: data.data
+                    })
+                });
+
+            }).
+             error(function(data, status, headers, config) {
+                 alert("Error: Could not retrieve data from server!");
+            });
+
+
+            timeline_loaded = true;
 
         }
 
@@ -210,4 +280,9 @@ function generateClassChart(div_name, title, x_title, y_title, label, dataPoints
         }]
     });
     chart.render();
+}
+
+function generateTimeline (div_name, title, x_title, y_title, label, dataPoints, classId)
+{
+
 }
