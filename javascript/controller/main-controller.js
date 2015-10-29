@@ -28,6 +28,10 @@ mainApp.config(['$routeProvider','$locationProvider', function($routeProvider, $
              templateUrl: 'html-templates/student.html',
              controller: 'GroupStudentCtrl'
         }).
+        when('/help', {
+            templateUrl: 'html-templates/help.html',
+            controller: 'HelpCtrl'
+        }).
        when('/logout', {
              templateUrl: 'html-templates/login.html',
              controller: 'LogoutCtrl'

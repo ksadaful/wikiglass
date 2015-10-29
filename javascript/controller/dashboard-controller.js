@@ -15,7 +15,7 @@ mainApp.controller('DashboardCtrl', ['$scope','$routeParams','$http' , '$window'
     else
     {
         SetNavBar();
-        $http.get('php/getAllWikiPages.php').
+        $http.get('php/getAllWikiPagesByUsername.php?username='+username).
             success(function(data, status, headers, config) {
               $scope.wikiPages = data;
               listOfClasses = data;

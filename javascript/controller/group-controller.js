@@ -69,7 +69,7 @@ mainApp.controller('ClassGroupCtrl', ['$scope','$routeParams','$http' , '$window
          $scope.show_time = true;
          timeline_view = true;
          if(timeline_loaded) return;
-         $http.get('php/getWeeklyWordAmendmentByGroupIdHighchart2.php?group_id='+ $routeParams.class_id + 'gp' +  $routeParams.group_no ).
+         $http.get('php/getWeeklyWordAmendmentByGroupIdTimeline.php?group_id='+ $routeParams.class_id + 'gp' +  $routeParams.group_no ).
            success(function(data, status, headers, config)
            {
 //                  console.log(data);

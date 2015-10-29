@@ -9,5 +9,6 @@ function CleanNavBar()
 {
     document.getElementById("welcome-msg").innerHTML = "";
     document.getElementById("logout").innerHTML = '';
+    document.getElementById("help").innerHTML = '';
 //    document.getElementById("logs").innerHTML = '';
 }

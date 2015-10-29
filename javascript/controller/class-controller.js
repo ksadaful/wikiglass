@@ -78,7 +78,7 @@ mainApp.controller('ClassCtrl', ['$scope','$routeParams','$http' , '$window', fu
          timeline_view = true;
          LogUserActivity(classID, ""  , ""  );
          if(timeline_loaded) return;
-         $http.get('php/getWeeklyRevisionCountByClassIdHighchart2.php?class_id='+ classID ).
+         $http.get('php/getWeeklyRevisionCountByClassIdTimeline.php?class_id='+ classID ).
              success(function(data, status, headers, config) {
 
                 for(i = 0 ; i < data.data.length ; i++)
