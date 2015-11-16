@@ -17,7 +17,7 @@
     $query = 'SELECT User_name, Total_involved_pages, Total_involved_revisions, Total_words_addition, Total_words_deletion
                 FROM User_stats_by_group
                 WHERE User_perm="write"
-                AND Group_id="'.$groupNo.'";';
+                AND Group_id LIkE "%'.$groupNo.'%";';
     $result = mysqli_query($conn, $query) or die ('Failed to query '.   mysqli_error($conn));
     $json = array();
     while($row=mysqli_fetch_array($result)) {

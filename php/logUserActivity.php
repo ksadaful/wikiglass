@@ -13,7 +13,7 @@
     if(!empty($_POST['chart_type'])) {  $chart_type = $_POST['chart_type'] ;} else {  $chart_type = null; }
 
 
-    $query = 'INSERT INTO Activitylog (username,event,class_no,group_no,student_name,chart_type) VALUES ("'.$username.'","'.$event.'","'.$class_id.'","'.$group_no.'","'.$student.'","'.$chart_type.'");';
+    $query = 'INSERT INTO ActivityLog (username,event,class_no,group_no,student_name,chart_type) VALUES ("'.$username.'","'.$event.'","'.$class_id.'","'.$group_no.'","'.$student.'","'.$chart_type.'");';
     echo $query;
     $result = mysqli_query($conn, $query) or die ('Failed to query '.   mysqli_error($conn));
     echo $result;
