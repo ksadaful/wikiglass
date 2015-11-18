@@ -17,7 +17,7 @@
     }
     if (isset($_SESSION["username"]))
 	{
-	    $response_message = array('status' => 200, 'message' => "User already logged in", 'username' => $_SESSION['username'], 'fullname' => $_SESSION['fullname']);
+	    $response_message = array('status' => 200, 'message' => "User already logged in", 'username' => $_SESSION['username'], "fullname" => $_SESSION['fullname']);
         echo json_encode($response_message);
         return;
 

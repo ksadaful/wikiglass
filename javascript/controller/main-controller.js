@@ -36,6 +36,10 @@ mainApp.config(['$routeProvider','$locationProvider', function($routeProvider, $
              templateUrl: 'html-templates/login.html',
              controller: 'LogoutCtrl'
         }).
+        when('/editProfile', {
+             templateUrl: 'html-templates/editProfile.html',
+             controller: 'EditProfileCtrl'
+        }).
        otherwise({
           redirectTo: '/dashboard'
        });

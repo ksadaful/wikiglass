@@ -14,7 +14,6 @@ function LoggedIn()
     }
     http.open("GET","php/checkLoginStatus.php",false);
     http.send();
-    console.log(response);
     var response = JSON.parse(http.responseText);
     console.log(response);
     if(response.status==404)
