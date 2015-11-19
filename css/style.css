@@ -4,6 +4,10 @@
     color: #FF0000;
 }
 
+#error_msg
+{
+    color: #FF0000;
+}
 
 #right {
     float: right;
